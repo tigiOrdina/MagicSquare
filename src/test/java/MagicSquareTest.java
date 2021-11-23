@@ -10,19 +10,19 @@ public class MagicSquareTest {
         //assert diagonals
         int sumDia1 = 0;
         for (int i = 0; i< size; i++) {
-            sumDia1 += magicSquare.getValue(size-i-1,i);
+            sumDia1 += magicSquare.getPosition(size-i-1,i);
         }
         //assert diagonals
         int sumDia2 = 0;
         for (int i = 0; i< size; i++) {
-            sumDia2 += magicSquare.getValue(i, size-i-1);
+            sumDia2 += magicSquare.getPosition(i, size-i-1);
         }
         assert sumDia2 == sumDia1;
         //assert rows
         for (int i = 0; i< size; i++) {
             int sum = 0;
             for (int j = 0; j< size; j++) {
-                sum += magicSquare.getValue(i,j);
+                sum += magicSquare.getPosition(i,j);
             }
             assert sum == sumDia1;
         }
@@ -31,7 +31,7 @@ public class MagicSquareTest {
         for (int i = 0; i< size; i++) {
             int sum = 0;
             for (int j = 0; j< size; j++) {
-                sum += magicSquare.getValue(j,i);
+                sum += magicSquare.getPosition(j,i);
             }
             assert sum == sumDia1;
         }
@@ -45,12 +45,12 @@ public class MagicSquareTest {
         //assert diagonals
         int sumDia1 = 0;
         for (int i = 0; i< size; i++) {
-            sumDia1 += magicSquare.getValue(size-i-1,i);
+            sumDia1 += magicSquare.getPosition(size-i-1,i);
         }
         //assert diagonals
         int sumDia2 = 0;
         for (int i = 0; i< size; i++) {
-            sumDia2 += magicSquare.getValue(i, size-i-1);
+            sumDia2 += magicSquare.getPosition(i, size-i-1);
         }
         assert sumDia2 == sumDia1;
 
@@ -58,7 +58,7 @@ public class MagicSquareTest {
         for (int i = 0; i< size; i++) {
             int sum = 0;
             for (int j = 0; j< size; j++) {
-                sum += magicSquare.getValue(i,j);
+                sum += magicSquare.getPosition(i,j);
             }
             assert sum == sumDia1;
         }
@@ -67,7 +67,7 @@ public class MagicSquareTest {
         for (int i = 0; i< size; i++) {
             int sum = 0;
             for (int j = 0; j< size; j++) {
-                sum += magicSquare.getValue(j,i);
+                sum += magicSquare.getPosition(j,i);
             }
             assert sum == sumDia1;
         }

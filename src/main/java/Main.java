@@ -5,7 +5,7 @@ public class Main {
         for (int i = 0; i< size; i++) {
             StringBuilder str = new StringBuilder();
             for (int j = 0; j< size; j++) {
-                str.append(magicSquare.getValue(i,j));
+                str.append(magicSquare.getPosition(i,j));
                 str.append(" ");
             }
             System.out.println(str.toString());
